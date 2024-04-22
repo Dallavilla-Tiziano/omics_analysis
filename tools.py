@@ -1,3 +1,6 @@
+import pandas as pd
+from pybiomart import Server
+
 # Prepare proteome data for analysis
 def prepareProteomeDataset(clinical_data_path, proteome_data_path, data_type, confidence_to_drop=['Low', 'Medium'], abundances_start_at=8, output_index='uniprot', max_na_samples=45):
 	''' clinical_data_path: path to clinical data
@@ -88,5 +91,5 @@ def prepareProteomeDataset(clinical_data_path, proteome_data_path, data_type, co
 	d_res={}
 	d_res['clinical'] = metaclinical_proteome
 	d_res['proteome_abundance'] = proteome_collapsed
-	d_res['psm'] = psms
+	d_res['psm'] = psms[proteome_collapsed.index]
 	return d_res
