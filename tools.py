@@ -1,5 +1,5 @@
 # Prepare proteome data for analysis
-function prepareProteomeDataset(clinical_data_path, proteome_data_path, data_type, confidence_to_drop=['Low', 'Medium'], abundances_start_at=8, output_index='uniprot', max_na_samples=45):
+def prepareProteomeDataset(clinical_data_path, proteome_data_path, data_type, confidence_to_drop=['Low', 'Medium'], abundances_start_at=8, output_index='uniprot', max_na_samples=45):
 	''' clinical_data_path: path to clinical data
 		proteome_data_path: path to proteome data
 		data_type: where the protein data come from (PLASMA, PBMC...)
